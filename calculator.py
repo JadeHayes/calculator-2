@@ -15,7 +15,12 @@ while True:
         if i == 0:
             continue
         else:
-            tokens[i] = float(token)
+            try:
+                tokens[i] = float(token)
+            except:
+                print "try again"
+                tokens[0] = "bad"
+                break
 
     if tokens[0] == 'q':
         break
@@ -52,5 +57,9 @@ while True:
         new = tokens[1:]
         print mod(new)
 
+    elif tokens[0] == 'bad':
+        continue
+
     else:
+        print "Sorry I didn't understand that, try again."
         continue
