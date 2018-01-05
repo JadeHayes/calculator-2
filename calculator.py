@@ -21,28 +21,36 @@ while True:
         break
 
     elif tokens[0] == '+':
-        print add(tokens[1], tokens[2])
+        num = tokens[1:]
+        print add(num)
 
     elif tokens[0] == '-':
-        print subtract(tokens[1], tokens[2])
+        new = tokens[1:]
+        print subtract(new)
 
     elif tokens[0] == '*':
-        print multiply(tokens[1], tokens[2])
+        new = tokens[1:]
+        print multiply(new)
 
     elif tokens[0] == '/':
-        print divide(tokens[1], tokens[2])
+        new = tokens[1:]
+        print divide(new)
 
     elif tokens[0] == 'square':
-        print square(tokens[1])
+        new = tokens[1:]
+        print square(new)
 
     elif tokens[0] == 'cube':
-        print cube(tokens[1])
+        new = tokens[1:]
+        print cube(new)
 
     elif tokens[0] == 'pow':
-        print power(tokens[1], tokens[2])
+        new = tokens[1:]
+        print power(new)
 
     elif tokens[0] == 'mod':
-        print mod(tokens[1], tokens[2])
+        new = tokens[1:]
+        print mod(new)
 
     else:
         continue

@@ -1,53 +1,65 @@
 """Math functions for calculator."""
 
 
-def add(num1, num2):
-    """Return the sum of the two inputs."""
-
-    return num1 + num2
-
-
-def subtract(num1, num2):
-    """Return the second number subtracted from the first."""
-
-    return num1 - num2
+def add(nums):
+    """Return the sum of the inputs."""
+    answer = 0
+    for each in nums:
+        answer += each
+    return answer
 
 
-def multiply(num1, num2):
-    """Multiply the two inputs together."""
+def subtract(nums):
+    """Subtracted these numbers"""
+    answer = nums[0]
+    for each in nums[1:]:
+        answer -= each
+    return answer
 
-    return num1 * num2
+
+def multiply(nums):
+    """Multiply the inputs together."""
+    answer = nums[0]
+    for each in nums[1:]:
+        answer *= each
+    return answer
 
 
-def divide(num1, num2):
+def divide(nums):
     """Divide the first input by the second and return the result."""
+    answer = nums[0]
+    for each in nums[1:]:
+        answer /= each
+    return answer
 
-    return float(num1) / num2
 
-
-def square(num1):
+def square(nums):
     """Return the square of the input."""
+    answer = nums[0] ** 2
+    for each in nums[1:]:
+        answer *= (each ** 2)
+    return answer
 
-    # Needs only one argument
 
-    return num1 * num1
-
-
-def cube(num1):
+def cube(nums):
     """Return the cube of the input."""
+    answer = nums[0] ** 3
+    for each in nums[1:]:
+        answer *= (each ** 3)
+    return answer
 
-    # Needs only one argument
 
-    return num1 * num1 * num1
-
-
-def power(num1, num2):
+def power(nums):
     """Raise num1 to the power of num and return the value."""
+    answer = nums[0]
+    for each in nums[1:]:
+        answer = answer ** each
+    return answer
 
-    return num1 ** num2  # ** = exponent operator
 
-
-def mod(num1, num2):
+def mod(nums):
     """Return the remainder of num / num2."""
-
-    return num1 % num2
+    answer = nums[0]
+    for each in nums[1:]:
+        answer = answer % each
+    return answer
